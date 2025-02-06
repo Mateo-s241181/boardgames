@@ -6,7 +6,8 @@ func (board Board) RowContainsOnly(row int, s string) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktionen ContainsOnly und GetRow.
 	 */
-	return ContainsOnly(board.GetRow(row), s)
+	// TODO
+	return false
 }
 
 // ColumnContainsOnly erwartet eine Spaltennummer col und einen String s.
@@ -15,7 +16,8 @@ func (board Board) ColumnContainsOnly(col int, s string) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktionen ContainsOnly und GetColumn.
 	 */
-	return ContainsOnly(board.GetColumn(col), s)
+	// TODO
+	return false
 }
 
 // DiagDownRightContainsOnly erwartet einen String s.
@@ -25,7 +27,8 @@ func (board Board) DiagDownRightContainsOnly(s string) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktionen ContainsOnly und GetDiagDownRight.
 	 */
-	return ContainsOnly(board.GetDiagDownRight(0), s)
+	// TODO
+	return false
 }
 
 // DiagUpRightContainsOnly erwartet einen String s.
@@ -35,7 +38,8 @@ func (board Board) DiagUpRightContainsOnly(s string) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktionen ContainsOnly und GetDiagUpRight.
 	 */
-	return ContainsOnly(board.GetDiagUpRight(0), s)
+	// TODO
+	return false
 }
 
 // RowEmpty erwartet ein Spielfeld und eine Zeilennummer row.
@@ -45,7 +49,8 @@ func (board Board) RowEmpty(row int) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktion RowContainsOnly.
 	 */
-	return board.RowContainsOnly(row, " ")
+	// TODO
+	return false
 }
 
 // ColumnEmpty erwartet ein Spielfeld und eine Spaltennummer col.
@@ -55,7 +60,8 @@ func (board Board) ColumnEmpty(col int) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktion ColumnContainsOnly.
 	 */
-	return board.ColumnContainsOnly(col, " ")
+	// TODO
+	return false
 }
 
 // DiagDownRightEmpty erwartet ein Spielfeld und eine Spaltennummer col.
@@ -66,7 +72,8 @@ func (board Board) DiagDownRightEmpty(col int) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktionen GetDiagDownRight und ContainsOnly.
 	 */
-	return ContainsOnly(board.GetDiagDownRight(col), " ")
+	// TODO
+	return false
 }
 
 // DiagUpRightEmpty erwartet ein Spielfeld und eine Spaltennummer col.
@@ -77,5 +84,6 @@ func (board Board) DiagUpRightEmpty(col int) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktionen GetDiagUpRight und ContainsOnly.
 	 */
-	return ContainsOnly(board.GetDiagUpRight(col), " ")
+	// TODO
+	return false
 }

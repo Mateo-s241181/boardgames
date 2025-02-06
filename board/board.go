@@ -39,9 +39,7 @@ func (board Board) GetColumn(col int) []string {
 	 * Laufen Sie in einer Schleife durch board und hängen
 	 * Sie jeweils das col-te Element an result an.
 	 */
-	for _, row := range board {
-		result = append(result, row[col])
-	}
+	// TODO
 	return result
 }
 
@@ -55,12 +53,7 @@ func (board Board) GetDiagDownRight(col int) []string {
 	 * Laufen Sie in einer Schleife durch board und hängen
 	 * Sie jeweils das col+i-te Element an result an.
 	 */
-	for i := 0; i < len(board); i++ {
-		r, c := i, col+i
-		if r >= 0 && r < len(board) && c >= 0 && c < len(board[0]) {
-			result = append(result, board[r][c])
-		}
-	}
+	// TODO
 	return result
 }
 
@@ -74,11 +67,6 @@ func (board Board) GetDiagUpRight(col int) []string {
 	 * Sie jeweils das col-i-te Element aus der passenden Zeile an result an.
 	 */
 	result := []string{}
-	for i := 0; i < len(board); i++ {
-		r, c := len(board)-1-i, col+i
-		if r >= 0 && r < len(board) && c >= 0 && c < len(board[0]) {
-			result = append(result, board[r][c])
-		}
-	}
+	// TODO
 	return result
 }

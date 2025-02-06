@@ -9,20 +9,7 @@ func PlayerWins(b board.Board, player string) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktionen Row
 	 */
-	for i := 0; i < len(b); i++ {
-		if b.RowContainsOnly(i, player) {
-			return true
-		}
-		if b.ColumnContainsOnly(i, player) {
-			return true
-		}
-		if b.DiagDownRightContainsOnly(player) {
-			return true
-		}
-		if b.DiagUpRightContainsOnly(player) {
-			return true
-		}
-	}
+	// TODO
 	return false
 }
 
@@ -36,5 +23,6 @@ func PlayerAllowed(b board.Board, row, col int) bool {
 	 * Prüfen Sie ob die Zeilen- und Spaltennummer innerhalb des Spielfelds liegen.
 	 * Prüfen Sie ob das Feld leer ist.
 	 */
-	return row >= 0 && row < len(b) && col >= 0 && col < len(b[0]) && b[row][col] == " "
+	// TODO
+	return false
 }

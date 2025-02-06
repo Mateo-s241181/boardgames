@@ -7,11 +7,7 @@ func ContainsOnly(list []string, s string) bool {
 	 * Prüfen Sie mit einer Schleife, ob irgend einer der
 	 * Listeneinträge ungleich s ist.
 	 */
-	for _, v := range list {
-		if v != s {
-			return false
-		}
-	}
+	// TODO
 	return true
 }
 
@@ -22,10 +18,6 @@ func ContainsAny(list []string, s string) bool {
 	 * Prüfen Sie mit einer Schleife, ob irgend einer der
 	 * Listeneinträge gleich s ist.
 	 */
-	for _, v := range list {
-		if v == s {
-			return true
-		}
-	}
+	// TODO
 	return false
 }
