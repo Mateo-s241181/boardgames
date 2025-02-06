@@ -1,13 +1,51 @@
 package board
 
+// RowContainsOnly erwartet eine Zeilennummer row und einen String s.
+// Liefert true, wenn die row-te Zeile nur aus dem gegebenen String s besteht.
+func (board Board) RowContainsOnly(row int, s string) bool {
+	/* Hinweis:
+	 * Verwenden Sie die Funktionen ContainsOnly und GetRow.
+	 */
+	return ContainsOnly(board.GetRow(row), s)
+}
+
+// ColumnContainsOnly erwartet eine Spaltennummer col und einen String s.
+// Liefert true, wenn die col-te Spalte nur aus dem gegebenen String s besteht.
+func (board Board) ColumnContainsOnly(col int, s string) bool {
+	/* Hinweis:
+	 * Verwenden Sie die Funktionen ContainsOnly und GetColumn.
+	 */
+	return ContainsOnly(board.GetColumn(col), s)
+}
+
+// DiagDownRightContainsOnly erwartet einen String s.
+// Liefert true, wenn die Diagonale, die in Spalte 0 und Zeile 0 beginnt,
+// nur aus dem gegebenen String s besteht.
+func (board Board) DiagDownRightContainsOnly(s string) bool {
+	/* Hinweis:
+	 * Verwenden Sie die Funktionen ContainsOnly und GetDiagDownRight.
+	 */
+	return ContainsOnly(board.GetDiagDownRight(0), s)
+}
+
+// DiagUpRightContainsOnly erwartet einen String s.
+// Liefert true, wenn die Diagonale, die in Spalte 0 und der letzten Zeile beginnt,
+// nur aus dem gegebenen String s besteht.
+func (board Board) DiagUpRightContainsOnly(s string) bool {
+	/* Hinweis:
+	 * Verwenden Sie die Funktionen ContainsOnly und GetDiagUpRight.
+	 */
+	return ContainsOnly(board.GetDiagUpRight(0), s)
+}
+
 // RowEmpty erwartet ein Spielfeld und eine Zeilennummer row.
 // Liefert true, wenn die row-te Zeile leer ist, sonst false.
 // Liefert true, wenn die Zeile nicht existiert.
 func (board Board) RowEmpty(row int) bool {
 	/* Hinweis:
-	 * Verwenden Sie die Funktionen ContainsOnly und GetRow.
+	 * Verwenden Sie die Funktion RowContainsOnly.
 	 */
-	return ContainsOnly(board.GetRow(row), " ")
+	return board.RowContainsOnly(row, " ")
 }
 
 // ColumnEmpty erwartet ein Spielfeld und eine Spaltennummer col.
@@ -15,9 +53,9 @@ func (board Board) RowEmpty(row int) bool {
 // Liefert true, wenn die Spalte nicht existiert.
 func (board Board) ColumnEmpty(col int) bool {
 	/* Hinweis:
-	 * Verwenden Sie die Funktionen ContainsOnly und GetColumn.
+	 * Verwenden Sie die Funktion ColumnContainsOnly.
 	 */
-	return ContainsOnly(board.GetColumn(col), " ")
+	return board.ColumnContainsOnly(col, " ")
 }
 
 // DiagDownRightEmpty erwartet ein Spielfeld und eine Spaltennummer col.
@@ -26,9 +64,9 @@ func (board Board) ColumnEmpty(col int) bool {
 // Bei ungültigen Spaltennummern wird ggf. eine Teil-Diagonale betrachtet.
 func (board Board) DiagDownRightEmpty(col int) bool {
 	/* Hinweis:
-	 * Verwenden Sie die Funktionen ContainsOnly und GetDiagDownRight.
+	 * Verwenden Sie die Funktion DiagDownRightContainsOnly.
 	 */
-	return ContainsOnly(board.GetDiagDownRight(col), " ")
+	return board.DiagDownRightContainsOnly(" ")
 }
 
 // DiagUpRightEmpty erwartet ein Spielfeld und eine Spaltennummer col.
@@ -37,7 +75,7 @@ func (board Board) DiagDownRightEmpty(col int) bool {
 // Bei ungültigen Spaltennummern wird ggf. eine Teil-Diagonale betrachtet.
 func (board Board) DiagUpRightEmpty(col int) bool {
 	/* Hinweis:
-	 * Verwenden Sie die Funktionen ContainsOnly und GetDiagUpRight.
+	 * Verwenden Sie die Funktion DiagUpRightContainsOnly.
 	 */
-	return ContainsOnly(board.GetDiagUpRight(col), " ")
+	return board.DiagUpRightContainsOnly(" ")
 }
