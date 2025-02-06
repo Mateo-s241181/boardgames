@@ -64,9 +64,9 @@ func (board Board) ColumnEmpty(col int) bool {
 // Bei ungültigen Spaltennummern wird ggf. eine Teil-Diagonale betrachtet.
 func (board Board) DiagDownRightEmpty(col int) bool {
 	/* Hinweis:
-	 * Verwenden Sie die Funktion DiagDownRightContainsOnly.
+	 * Verwenden Sie die Funktionen GetDiagDownRight und ContainsOnly.
 	 */
-	return board.DiagDownRightContainsOnly(" ")
+	return ContainsOnly(board.GetDiagDownRight(col), " ")
 }
 
 // DiagUpRightEmpty erwartet ein Spielfeld und eine Spaltennummer col.
@@ -75,7 +75,7 @@ func (board Board) DiagDownRightEmpty(col int) bool {
 // Bei ungültigen Spaltennummern wird ggf. eine Teil-Diagonale betrachtet.
 func (board Board) DiagUpRightEmpty(col int) bool {
 	/* Hinweis:
-	 * Verwenden Sie die Funktion DiagUpRightContainsOnly.
+	 * Verwenden Sie die Funktionen GetDiagUpRight und ContainsOnly.
 	 */
-	return board.DiagUpRightContainsOnly(" ")
+	return ContainsOnly(board.GetDiagUpRight(col), " ")
 }
