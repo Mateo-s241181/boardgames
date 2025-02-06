@@ -69,10 +69,6 @@ func (board Board) ColumnEmpty(col int) bool {
 // nur Leerzeichen enthält.
 // Bei ungültigen Spaltennummern wird ggf. eine Teil-Diagonale betrachtet.
 func (board Board) DiagDownRightEmpty(col int) bool {
-	/* Hinweis:
-	 * Verwenden Sie die Funktionen GetDiagDownRight und ContainsOnly.
-	 */
-	// TODO
 	return false
 }
 
@@ -81,9 +77,5 @@ func (board Board) DiagDownRightEmpty(col int) bool {
 // nur Leerzeichen enthält.
 // Bei ungültigen Spaltennummern wird ggf. eine Teil-Diagonale betrachtet.
 func (board Board) DiagUpRightEmpty(col int) bool {
-	/* Hinweis:
-	 * Verwenden Sie die Funktionen GetDiagUpRight und ContainsOnly.
-	 */
-	// TODO
 	return false
 }

@@ -6,10 +6,6 @@ import "boardgames/board"
 // das einen Spieler repräsentiert (meist "X" oder "O").
 // Liefert true, falls dieser Spieler gewonnen hat.
 func PlayerWins(b board.Board, player string) bool {
-	/* Hinweis:
-	 * Verwenden Sie die Funktionen Row
-	 */
-	// TODO
 	return false
 }
 
@@ -19,10 +15,6 @@ func PlayerWins(b board.Board, player string) bool {
 // Ein Zug ist erlaubt, wenn das Feld leer ist
 // und wenn die Position gültig ist.
 func PlayerAllowed(b board.Board, row, col int) bool {
-	/* Hinweis:
-	 * Prüfen Sie ob die Zeilen- und Spaltennummer innerhalb des Spielfelds liegen.
-	 * Prüfen Sie ob das Feld leer ist.
-	 */
 	// TODO
 	return false
 }
