@@ -8,8 +8,8 @@ func QueenAllowed(b board.Board, row, col int) bool {
 	/* Hinweis:
 	 * Verwenden Sie die Funktionen RowEmpty, ColumnEmpty, ... aus dem Package board.
 	 */
-	return board.RowEmpty(b, row) &&
-		board.ColumnEmpty(b, col) &&
-		board.DiagDownRightEmpty(b, col-row) &&
-		board.DiagUpRightEmpty(b, col-(len(b)-1-row))
+	return b.RowEmpty(row) &&
+		b.ColumnEmpty(col) &&
+		b.DiagDownRightEmpty(col-row) &&
+		b.DiagUpRightEmpty(col-(len(b)-1-row))
 }

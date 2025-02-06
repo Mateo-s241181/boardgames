@@ -2,17 +2,17 @@ package board
 
 import "fmt"
 
-func ExampleRowEmpty() {
+func ExampleBoard_RowEmpty() {
 	board := EmptyBoard(3)
 	board[0] = []string{" ", " ", " "}
 	board[1] = []string{" ", "Q", " "}
 	board[2] = []string{" ", " ", " "}
 
-	fmt.Println(RowEmpty(board, 0))
-	fmt.Println(RowEmpty(board, 1))
-	fmt.Println(RowEmpty(board, 2))
-	fmt.Println(RowEmpty(board, -1))
-	fmt.Println(RowEmpty(board, 3))
+	fmt.Println(board.RowEmpty(0))
+	fmt.Println(board.RowEmpty(1))
+	fmt.Println(board.RowEmpty(2))
+	fmt.Println(board.RowEmpty(-1))
+	fmt.Println(board.RowEmpty(3))
 
 	// Output:
 	// true
@@ -22,17 +22,17 @@ func ExampleRowEmpty() {
 	// true
 }
 
-func ExampleColumnEmpty() {
+func ExampleBoard_ColumnEmpty() {
 	board := EmptyBoard(3)
 	board[0] = []string{" ", " ", " "}
 	board[1] = []string{" ", " ", "Q"}
 	board[2] = []string{" ", " ", " "}
 
-	fmt.Println(ColumnEmpty(board, 0))
-	fmt.Println(ColumnEmpty(board, 1))
-	fmt.Println(ColumnEmpty(board, 2))
-	fmt.Println(ColumnEmpty(board, -1))
-	fmt.Println(ColumnEmpty(board, 3))
+	fmt.Println(board.ColumnEmpty(0))
+	fmt.Println(board.ColumnEmpty(1))
+	fmt.Println(board.ColumnEmpty(2))
+	fmt.Println(board.ColumnEmpty(-1))
+	fmt.Println(board.ColumnEmpty(3))
 
 	// Output:
 	// true
@@ -42,19 +42,19 @@ func ExampleColumnEmpty() {
 	// true
 }
 
-func ExampleDiagDownRightEmpty() {
+func ExampleBoard_DiagDownRightEmpty() {
 	board := EmptyBoard(3)
 	board[0] = []string{" ", " ", " "}
 	board[1] = []string{" ", " ", "Q"}
 	board[2] = []string{"Q", "Q", " "}
 
-	fmt.Println(DiagDownRightEmpty(board, -3))
-	fmt.Println(DiagDownRightEmpty(board, -2))
-	fmt.Println(DiagDownRightEmpty(board, -1))
-	fmt.Println(DiagDownRightEmpty(board, 0))
-	fmt.Println(DiagDownRightEmpty(board, 1))
-	fmt.Println(DiagDownRightEmpty(board, 2))
-	fmt.Println(DiagDownRightEmpty(board, 3))
+	fmt.Println(board.DiagDownRightEmpty(-3))
+	fmt.Println(board.DiagDownRightEmpty(-2))
+	fmt.Println(board.DiagDownRightEmpty(-1))
+	fmt.Println(board.DiagDownRightEmpty(0))
+	fmt.Println(board.DiagDownRightEmpty(1))
+	fmt.Println(board.DiagDownRightEmpty(2))
+	fmt.Println(board.DiagDownRightEmpty(3))
 
 	// Output:
 	// true
@@ -66,19 +66,19 @@ func ExampleDiagDownRightEmpty() {
 	// true
 }
 
-func ExampleDiagUpRightEmpty() {
+func ExampleBoard_DiagUpRightEmpty() {
 	board := EmptyBoard(3)
 	board[0] = []string{" ", " ", " "}
 	board[1] = []string{" ", " ", "Q"}
 	board[2] = []string{"Q", "Q", " "}
 
-	fmt.Println(DiagUpRightEmpty(board, -3))
-	fmt.Println(DiagUpRightEmpty(board, -2))
-	fmt.Println(DiagUpRightEmpty(board, -1))
-	fmt.Println(DiagUpRightEmpty(board, 0))
-	fmt.Println(DiagUpRightEmpty(board, 1))
-	fmt.Println(DiagUpRightEmpty(board, 2))
-	fmt.Println(DiagUpRightEmpty(board, 3))
+	fmt.Println(board.DiagUpRightEmpty(-3))
+	fmt.Println(board.DiagUpRightEmpty(-2))
+	fmt.Println(board.DiagUpRightEmpty(-1))
+	fmt.Println(board.DiagUpRightEmpty(0))
+	fmt.Println(board.DiagUpRightEmpty(1))
+	fmt.Println(board.DiagUpRightEmpty(2))
+	fmt.Println(board.DiagUpRightEmpty(3))
 
 	// Output:
 	// true

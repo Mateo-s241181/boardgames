@@ -2,18 +2,18 @@ package board
 
 import "fmt"
 
-func ExampleGetRow() {
+func ExampleBoard_GetRow() {
 	board := EmptyBoard(3)
 	board[0] = []string{"A", "B", "C"}
 	board[1] = []string{"D", "E", "F"}
 	board[2] = []string{"G", "H", "I"}
 
-	fmt.Println(GetRow(board, 0))
-	fmt.Println(GetRow(board, 1))
-	fmt.Println(GetRow(board, 2))
+	fmt.Println(board.GetRow(0))
+	fmt.Println(board.GetRow(1))
+	fmt.Println(board.GetRow(2))
 
-	fmt.Println(GetRow(board, -1))
-	fmt.Println(GetRow(board, 3))
+	fmt.Println(board.GetRow(-1))
+	fmt.Println(board.GetRow(3))
 
 	// Output:
 	// [A B C]
@@ -23,18 +23,18 @@ func ExampleGetRow() {
 	// []
 }
 
-func ExampleGetColumn() {
+func ExampleBoard_GetColumn() {
 	board := EmptyBoard(3)
 	board[0] = []string{"A", "B", "C"}
 	board[1] = []string{"D", "E", "F"}
 	board[2] = []string{"G", "H", "I"}
 
-	fmt.Println(GetColumn(board, 0))
-	fmt.Println(GetColumn(board, 1))
-	fmt.Println(GetColumn(board, 2))
+	fmt.Println(board.GetColumn(0))
+	fmt.Println(board.GetColumn(1))
+	fmt.Println(board.GetColumn(2))
 
-	fmt.Println(GetColumn(board, -1))
-	fmt.Println(GetColumn(board, 3))
+	fmt.Println(board.GetColumn(-1))
+	fmt.Println(board.GetColumn(3))
 
 	// Output:
 	// [A D G]
@@ -44,19 +44,19 @@ func ExampleGetColumn() {
 	// []
 }
 
-func ExampleGetDiagDownRight() {
+func ExampleBoard_GetDiagDownRight() {
 	board := EmptyBoard(3)
 	board[0] = []string{"A", "B", "C"}
 	board[1] = []string{"D", "E", "F"}
 	board[2] = []string{"G", "H", "I"}
 
-	fmt.Println(GetDiagDownRight(board, -3))
-	fmt.Println(GetDiagDownRight(board, -2))
-	fmt.Println(GetDiagDownRight(board, -1))
-	fmt.Println(GetDiagDownRight(board, 0))
-	fmt.Println(GetDiagDownRight(board, 1))
-	fmt.Println(GetDiagDownRight(board, 2))
-	fmt.Println(GetDiagDownRight(board, 3))
+	fmt.Println(board.GetDiagDownRight(-3))
+	fmt.Println(board.GetDiagDownRight(-2))
+	fmt.Println(board.GetDiagDownRight(-1))
+	fmt.Println(board.GetDiagDownRight(0))
+	fmt.Println(board.GetDiagDownRight(1))
+	fmt.Println(board.GetDiagDownRight(2))
+	fmt.Println(board.GetDiagDownRight(3))
 
 	// Output:
 	// []
@@ -68,19 +68,19 @@ func ExampleGetDiagDownRight() {
 	// []
 }
 
-func ExampleGetDiagUpRight() {
+func ExampleBoard_GetDiagUpRight() {
 	board := EmptyBoard(3)
 	board[0] = []string{"A", "B", "C"}
 	board[1] = []string{"D", "E", "F"}
 	board[2] = []string{"G", "H", "I"}
 
-	fmt.Println(GetDiagUpRight(board, -3))
-	fmt.Println(GetDiagUpRight(board, -2))
-	fmt.Println(GetDiagUpRight(board, -1))
-	fmt.Println(GetDiagUpRight(board, 0))
-	fmt.Println(GetDiagUpRight(board, 1))
-	fmt.Println(GetDiagUpRight(board, 2))
-	fmt.Println(GetDiagUpRight(board, 3))
+	fmt.Println(board.GetDiagUpRight(-3))
+	fmt.Println(board.GetDiagUpRight(-2))
+	fmt.Println(board.GetDiagUpRight(-1))
+	fmt.Println(board.GetDiagUpRight(0))
+	fmt.Println(board.GetDiagUpRight(1))
+	fmt.Println(board.GetDiagUpRight(2))
+	fmt.Println(board.GetDiagUpRight(3))
 
 	// Output:
 	// []
