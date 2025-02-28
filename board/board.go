@@ -35,7 +35,11 @@ func (board Board) GetColumn(col int) []string {
 		return []string{}
 	}
 	result := []string{}
-	// TODO
+
+	for i := range board {
+		result = append(result, board[i][col])
+	}
+
 	return result
 }
 
@@ -45,7 +49,20 @@ func (board Board) GetColumn(col int) []string {
 // Für ungültige Spaltennummern wird ggf. eine Teil-Diagonale geliefert.
 func (board Board) GetDiagDownRight(col int) []string {
 	result := []string{}
-	// TODO
+
+	for i := range board {
+
+		//Abbrechen, wenn die Spaltenanweisung die Länge einer Rehie Überschreitet
+		if col+i == len(board[i]) {
+			break
+		}
+		if col+i < 0 {
+			continue
+		}
+
+		result = append(result, board[i][col+i])
+	}
+
 	return result
 }
 
@@ -55,6 +72,21 @@ func (board Board) GetDiagDownRight(col int) []string {
 // Für ungültige Spaltennummern wird ggf. eine Teil-Diagonale geliefert.
 func (board Board) GetDiagUpRight(col int) []string {
 	result := []string{}
-	// TODO
+
+	for i := range board {
+
+		//Abbrechen, wenn die Spaltenanweisung die Länge einer Rehie Überschreitet
+		if col+i == len(board[i]) {
+			break
+		}
+		if col+i < 0 {
+			continue
+		}
+
+		lastRow := len(board) - 1
+
+		result = append(result, board[lastRow-i][col+i])
+	}
+
 	return result
 }

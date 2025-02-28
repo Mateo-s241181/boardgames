@@ -15,6 +15,7 @@ func main() {
 // Versucht, das Spiel ab der Nummer n zu lösen, indem es n an die aktuelle Position
 // schreibt und dann rekursiv mit allen für den Springer erreichbaren Feldern weitermacht.
 func SolveKnights(b board.Board, pos knights.BoardPos, n int) bool {
-	// TODO
+
+	//TODO
 	return false
 }
